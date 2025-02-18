@@ -1,0 +1,32 @@
+{
+  "name": "err-alytics",
+  "version": "1.0.0",
+  "description": "Lib para rastrear erros HTTP e disparar eventos para ferramentas analíticas (dataLayer ou gtag)",
+  "main": "./dist/http-error-tracker.umd.js",
+  "scripts": {
+    "build": "webpack --config webpack.config.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lucianfialho/errAlytics.git"
+  },
+  "keywords": [
+    "http",
+    "error",
+    "tracker",
+    "analytics",
+    "gtag",
+    "dataLayer"
+  ],
+  "author": "Lucian Fialho",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lucianfialho/errAlytics/issues"
+  },
+  "homepage": "https://github.com/lucianfialho/errAlytics#readme",
+  "devDependencies": {
+    "webpack": "^5.98.0",
+    "webpack-cli": "^6.0.1"
+  }
+}
