@@ -1,0 +1,19 @@
+# Pastas de dependências
+node_modules/
+
+# Diretório de build (bundle gerado pelo Webpack)
+dist/
+
+# Arquivos de log
+*.log
+
+# Arquivos de ambiente
+.env
+.env.local
+.env.*.local
+
+# Sistema operacional
+.DS_Store
+
+# Cache
+.cache/
