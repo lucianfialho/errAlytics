@@ -1,6 +1,6 @@
 # errAlytics
 
-[![npm version](https://img.shields.io/npm/v/err-alytics.svg)](https://www.npmjs.com/package/err-alytics) [![License: MIT](https://img.shields.io/npm/l/err-alytics.svg)](LICENSE)
+[![npm version](https://img.shields.io/npm/v/erralytics.svg)](https://www.npmjs.com/package/erralytics) [![License: MIT](https://img.shields.io/npm/l/erralytics.svg)](LICENSE)
 
 **errAlytics** é uma biblioteca leve e flexível para rastrear erros HTTP no navegador. Ela realiza uma requisição HEAD para a URL especificada (ou para a URL atual) e dispara eventos analíticos para ferramentas como o Google Tag Manager (via dataLayer – padrão) ou via gtag, conforme sua configuração.
 

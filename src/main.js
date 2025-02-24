@@ -1,31 +1,3 @@
-/**
- * Classe para rastreamento de erros HTTP usando diferentes métodos de rastreamento.
- * 
- * @class
- * @param {Object} [config={}] - Configuração personalizada para a instância do ErrAlytics.
- * @param {string} [config.trackingMethod="dataLayer"] - Método de rastreamento a ser utilizado ("dataLayer" ou "gtag").
- * @param {Object} [config.events] - Mapeamento de códigos de status HTTP para eventos personalizados.
- * @param {Object} [config.events.400] - Evento para código de status 400 (Bad Request).
- * @param {Object} [config.events.401] - Evento para código de status 401 (Unauthorized).
- * @param {Object} [config.events.403] - Evento para código de status 403 (Forbidden).
- * @param {Object} [config.events.404] - Evento para código de status 404 (Not Found).
- * @param {Object} [config.events.408] - Evento para código de status 408 (Request Timeout).
- * @param {Object} [config.events.429] - Evento para código de status 429 (Too Many Requests).
- * @param {Object} [config.events.500] - Evento para código de status 500 (Internal Server Error).
- * @param {Object} [config.events.502] - Evento para código de status 502 (Bad Gateway).
- * @param {Object} [config.events.503] - Evento para código de status 503 (Service Unavailable).
- * @param {Object} [config.events.504] - Evento para código de status 504 (Gateway Timeout).
- * 
- * @example
- * const errAlytics = new ErrAlytics({
- *   trackingMethod: "gtag",
- *   events: {
- *     404: { eventName: "pagina_nao_encontrada", data: { caminho_invalido: window.location.pathname } },
- *   },
- * });
- * 
- * errAlytics.track();
- */
 class ErrAlytics {
   constructor(config = {}) {
     const defaultConfig = {
@@ -46,24 +18,6 @@ class ErrAlytics {
     this.config = Object.assign(defaultConfig, config);
   }
 
-  /**
-   * Tracks the given URL using the specified tracking method.
-   *
-   * @param {string} [url=window.location.href] - The URL to track. Defaults to the current window location.
-   * @returns {Promise<Response>} - A promise that resolves to the fetch response.
-   *
-   * @example
-   * // Example usage:
-   * track("https://example.com")
-   *   .then(response => {
-   *     console.log("Tracking successful:", response);
-   *   })
-   *   .catch(err => {
-   *     console.error("Tracking failed:", err);
-   *   });
-   *
-   * @throws {Error} - Throws an error if the fetch request fails.
-   */
   track(url = window.location.href) {
     return fetch(url, { method: "HEAD" })
       .then((response) => {
@@ -97,10 +51,5 @@ class ErrAlytics {
   }
 }
 
-// Expor a classe no escopo global para uso via CDN
-if (typeof window !== "undefined") {
-  window.ErrAlytics = ErrAlytics;
-}
-
-// Exportação para suportar CommonJS e ES Module
-export default ErrAlytics;
+// Expor a classe diretamente no escopo global
+window.ErrAlytics = ErrAlytics;
