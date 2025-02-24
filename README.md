@@ -52,7 +52,7 @@ tracker.track().then((response) => {
   <meta charset="UTF-8">
   <title>Exemplo errAlytics via CDN</title>
   <!-- Inclua o bundle UMD da lib -->
-  <script src="https://unpkg.com/err-alytics@1.0.0/dist/http-error-tracker.umd.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/err-alytics/dist/err-alytics.umd.js"></script>
 </head>
 <body>
   <script>
