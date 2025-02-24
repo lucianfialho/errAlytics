@@ -52,15 +52,12 @@ tracker.track().then((response) => {
   <meta charset="UTF-8">
   <title>Exemplo errAlytics via CDN</title>
   <!-- Inclua o bundle UMD da lib -->
-  <script src="https://cdn.jsdelivr.net/npm/err-alytics/dist/err-alytics.umd.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/erralytics/dist/err-alytics.min.js"></script>
+
 </head>
 <body>
   <script>
-    // A lib estará disponível globalmente como HttpErrorTracker
-    const tracker = new HttpErrorTracker({
-      // Para usar gtag em vez de dataLayer, basta alterar:
-      // trackingMethod: 'gtag'
-    });
+    const tracker = new ErrAlytics();
     tracker.track();
   </script>
 </body>
