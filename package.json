@@ -1,6 +1,6 @@
 {
   "name": "err-alytics",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Lib para rastrear erros HTTP e disparar eventos para ferramentas analíticas (dataLayer ou gtag)",
   "main": "./dist/http-error-tracker.umd.js",
   "scripts": {
